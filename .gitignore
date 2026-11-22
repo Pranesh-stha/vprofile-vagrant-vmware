@@ -1,0 +1,5 @@
+# Vagrant machine state: VM files and per-VM private SSH keys. Never commit.
+.vagrant/
+
+# Console logs some boxes write next to the Vagrantfile
+*.log
