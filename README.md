@@ -47,14 +47,6 @@ vagrant halt        # stop all VMs
 vagrant destroy -f  # delete all VMs
 ```
 
-## What I changed from the original
-
-- **VirtualBox → VMware:** switched the provider and replaced the VM images with ones that have VMware builds.
-- **Memcached:** listens on IPv4 only (`-l 0.0.0.0`). IPv6 is disabled on this CentOS image, so the default `-l 127.0.0.1,::1` stopped the service from starting.
-- **RabbitMQ:** installs Erlang 24 from the RabbitMQ repo. Erlang 26 from EPEL made RabbitMQ 3.9 crash on every connection.
-- **Tomcat:** copies files with `cp` instead of `rsync`.
-- Removed scripts that weren't used.
-
 ## Note
 
 The passwords in these scripts (`admin123`, `test` / `test`, `admin_vp`) are lab defaults. This setup is for local learning only.
